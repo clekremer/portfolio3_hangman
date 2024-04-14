@@ -1,5 +1,6 @@
 import random
 from words import word_list 
+from hangman_stages import display_hangman
 
 # Function to get a random word from the word list
 def get_word():
@@ -36,3 +37,6 @@ def read_instructions():
 
 # Call the function to check if the user wants to read the instructions
 read_instructions()
+
+# Call the function to display the default stage of the hangman
+print(display_hangman(0))
