@@ -48,4 +48,35 @@ def start_game(word):
     max_attempts = 6
     word_completion = "_" * len(word)
     game_over = False
-    
+
+    # Main game loop
+    while not game_over:
+        print("\nWord to guess:", word_completion)
+        guess = input("Guess a letter: ").upper()
+        
+        # Check if the guess is a single letter
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter a single letter.")
+            continue
+        
+        # Check if the letter has already been guessed
+        if guess in guessed_letters:
+            print("You've already guessed that letter.")
+            continue
+        
+        # Add the guessed letter to the list of guessed letters
+        guessed_letters.append(guess)
+        
+        # Check if the guess is in the word
+        if guess in word:
+            print("Correct guess!")
+            # Update the word completion with the correctly guessed letter
+            word_completion = "".join([char if char in guessed_letters else "_" for char in word])
+        else:
+            print("Incorrect guess!")
+            incorrect_guesses += 1
+            print(display_hangman(incorrect_guesses))
+        
+
+# Start the game with the random word
+start_game(random_word)
