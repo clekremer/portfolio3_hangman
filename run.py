@@ -18,7 +18,6 @@ print("Welcome to Hangman!")
 
 
 # Function that prompts the user for input to determine if they want to read the instructions:
-
 def read_instructions():
     while True:
         choice = input("Do you want to read the instructions? (Y/N): ").strip().upper()
@@ -40,3 +39,13 @@ read_instructions()
 
 # Call the function to display the default stage of the hangman
 print(display_hangman(0))
+
+# Function to start the game
+def start_game(word):
+    # Initialize variables
+    guessed_letters = []
+    incorrect_guesses = 0
+    max_attempts = 6
+    word_completion = "_" * len(word)
+    game_over = False
+    
