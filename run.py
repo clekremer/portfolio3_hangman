@@ -45,7 +45,7 @@ def start_game(word):
     # Initialize variables
     guessed_letters = []
     incorrect_guesses = 0
-    max_attempts = 6
+    max_attempts = 7
     word_completion = "_" * len(word)
     game_over = False
 
