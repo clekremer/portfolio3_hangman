@@ -77,6 +77,13 @@ def start_game(word):
             incorrect_guesses += 1
             print(display_hangman(incorrect_guesses))
         
-
+        # Check if the player has won
+        if "_" not in word_completion:
+            print("Congratulations! You've guessed the word:", word)
+            game_over = True
+        # Check if the player has lost
+        elif incorrect_guesses == max_attempts:
+            print("Sorry, you've run out of attempts. The word was:", word)
+            game_over = True
 # Start the game with the random word
 start_game(random_word)
