@@ -16,6 +16,7 @@ print("Random word:", random_word)
 print("Welcome to Hangman!")
 
 
+# Function that prompts the user for input to determine if they want to read the instructions:
 
 def read_instructions():
     while True:
