@@ -1,6 +1,7 @@
 import random
 from words import word_list 
 from hangman_stages import display_hangman
+from pyfiglet import figlet_format
 
 # Function to get a random word from the word list
 def get_word():
@@ -8,16 +9,7 @@ def get_word():
     # Convert the word to uppercase for consistency
     return word.upper()  
 
-
-# Get a random word and print it
-random_word = get_word()
-print("Random word:", random_word)
-
-# Print initial message
-print("Welcome to Hangman!")
-
-
-# Function that prompts the user for input to determine if they want to read the instructions:
+# Function to display instructions
 def read_instructions():
     while True:
         choice = input("Do you want to read the instructions? (Y/N): ").strip().upper()
@@ -33,12 +25,6 @@ def read_instructions():
             break
         else:
             print("Invalid input. Please enter Y for Yes or N for No.")
-
-# Call the function to check if the user wants to read the instructions
-read_instructions()
-
-# Call the function to display the default stage of the hangman
-print(display_hangman(0))
 
 # Function to start the game
 def start_game(word):
@@ -80,12 +66,47 @@ def start_game(word):
         
         # Check if the player has won
         if "_" not in word_completion:
+            print (figlet_format("WON", font="acrobatic"))
             print("Congratulations! You've guessed the word:", word)
-            game_over = True
+            return True
         # Check if the player has lost
         elif incorrect_guesses == max_attempts:
+            print (figlet_format("LOSE", font="acrobatic"))
             print("Sorry, you've run out of attempts. The word was:", word)
-            game_over = True
+            return False
 
-# Start the game with the random word
-start_game(random_word)
+# Function to restart the game
+def restart_game():
+    while True:
+        play_again = input("Do you want to play again? (Y/N): ").strip().upper()
+        if play_again == 'Y':
+            return True
+        elif play_again == 'N':
+            print(figlet_format("Goodbye", font="acrobatic"))
+            print("Thank you for playing!")
+            return False
+        else:
+            print("Invalid input. Please enter Y for Yes or N for No.")
+
+# Main game loop
+while True:
+    # Print initial message
+    print(figlet_format("Hangman", font="acrobatic"))
+    # print("Welcome to Hangman!")
+    
+    # Call the function to check if the user wants to read the instructions
+    read_instructions()
+
+    # Get a random word
+    random_word = get_word()
+    print("Random word:", random_word)
+
+    # Start the game with the random word
+    if start_game(random_word):
+        # Check if the player wants to play again
+        if not restart_game():
+            break
+    else:
+        # If the player lost, ask to restart the game
+        if not restart_game():
+            break
