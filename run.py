@@ -2,12 +2,17 @@ import random
 from words import word_list 
 from hangman_stages import display_hangman
 from pyfiglet import figlet_format
+import os
 
 # Function to get a random word from the word list
 def get_word():
     word = random.choice(word_list)
     # Convert the word to uppercase for consistency
     return word.upper()  
+
+# Function to clear terminal
+def clear_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 # Function to display instructions
 def read_instructions():
@@ -35,6 +40,9 @@ def start_game(word):
     word_completion = "_" * len(word)
     game_over = False
     
+    # Display initial hangman stage
+    print(display_hangman(0))
+    
     # Main game loop
     while not game_over:
         print("\nWord to guess:", word_completion)
@@ -59,19 +67,20 @@ def start_game(word):
             print("Correct guess!")
             # Update the word completion with the correctly guessed letter
             word_completion = "".join([char if char in guessed_letters else "_" for char in word])
+            print("\nWord to guess:", word_completion)  # Display updated word completion
         else:
             print("Incorrect guess!")
             incorrect_guesses += 1
-            print(display_hangman(incorrect_guesses))
+            print(display_hangman(incorrect_guesses))  # Display current hangman stage
         
         # Check if the player has won
         if "_" not in word_completion:
-            print (figlet_format("WON", font="acrobatic"))
+            print(figlet_format("WON", font="acrobatic"))
             print("Congratulations! You've guessed the word:", word)
             return True
         # Check if the player has lost
         elif incorrect_guesses == max_attempts:
-            print (figlet_format("LOSE", font="acrobatic"))
+            print(figlet_format("LOSE", font="acrobatic"))
             print("Sorry, you've run out of attempts. The word was:", word)
             return False
 
@@ -92,7 +101,6 @@ def restart_game():
 while True:
     # Print initial message
     print(figlet_format("Hangman", font="acrobatic"))
-    # print("Welcome to Hangman!")
     
     # Call the function to check if the user wants to read the instructions
     read_instructions()
@@ -110,3 +118,5 @@ while True:
         # If the player lost, ask to restart the game
         if not restart_game():
             break
+
+    clear_terminal()
