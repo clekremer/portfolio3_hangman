@@ -45,13 +45,14 @@ def start_game(word):
     # Initialize variables
     guessed_letters = []
     incorrect_guesses = 0
-    max_attempts = 7
+    max_attempts = 6
     word_completion = "_" * len(word)
     game_over = False
-
+    
     # Main game loop
     while not game_over:
         print("\nWord to guess:", word_completion)
+        print("Used letters:", ", ".join(guessed_letters))  # Display used letters
         guess = input("Guess a letter: ").upper()
         
         # Check if the guess is a single letter
@@ -85,5 +86,6 @@ def start_game(word):
         elif incorrect_guesses == max_attempts:
             print("Sorry, you've run out of attempts. The word was:", word)
             game_over = True
+
 # Start the game with the random word
 start_game(random_word)
