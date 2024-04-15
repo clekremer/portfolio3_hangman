@@ -94,7 +94,7 @@ def restart_game():
         if play_again == 'Y':
             return True
         elif play_again == 'N':
-            print(figlet_format("Goodbye", font="acrobatic"))
+            print(figlet_format("Goodbye", font="acrobatic", width=120))
             print("Thank you for playing!")
             return False
         else:
@@ -103,7 +103,7 @@ def restart_game():
 # Main game loop
 while True:
     # Print initial message
-    print(figlet_format("Hangman", font="acrobatic"))
+    print(figlet_format("Hangman", font="acrobatic", width=120))
     
     # Call the function to check if the user wants to read the instructions
     read_instructions()
