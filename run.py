@@ -66,13 +66,13 @@ def start_game(word):
         
         # Check if the guess is in the word
         if guess in word:
-            print("Correct guess!")
+            print(10*"\n","Correct guess!")
             # Update the word completion with the correctly guessed letter
             word_completion = "".join([char if char in guessed_letters else "_" for char in word])
-            print("\nWord to guess:", word_completion)  # Display updated word completion
+            # print("\nWord to guess:", word_completion)  # Display updated word completion
             print(display_hangman(incorrect_guesses))  # Display current hangman stage
         else:
-            print("Incorrect guess!")
+            print(10*"\n","Incorrect guess!")
             incorrect_guesses += 1
             print(display_hangman(incorrect_guesses))  # Display current hangman stage
         
