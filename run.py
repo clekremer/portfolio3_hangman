@@ -36,7 +36,7 @@ def start_game(word):
     # Initialize variables
     guessed_letters = []
     incorrect_guesses = 0
-    max_attempts = 6
+    max_attempts = 7
     word_completion = "_" * len(word)
     game_over = False
     
@@ -68,6 +68,7 @@ def start_game(word):
             # Update the word completion with the correctly guessed letter
             word_completion = "".join([char if char in guessed_letters else "_" for char in word])
             print("\nWord to guess:", word_completion)  # Display updated word completion
+            print(display_hangman(incorrect_guesses))  # Display current hangman stage
         else:
             print("Incorrect guess!")
             incorrect_guesses += 1
