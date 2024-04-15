@@ -94,7 +94,7 @@ def restart_game():
         if play_again == 'Y':
             return True
         elif play_again == 'N':
-            print(figlet_format("Goodbye", font="acrobatic", width=120))
+            print(figlet_format("Goodbye", font="acrobatic", width=60))
             print("Thank you for playing!")
             return False
         else:
