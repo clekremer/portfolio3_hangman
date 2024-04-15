@@ -30,6 +30,7 @@ def read_instructions():
             break
         else:
             print("Invalid input. Please enter Y for Yes or N for No.")
+            break
 
 # Function to start the game
 def start_game(word):
@@ -45,9 +46,10 @@ def start_game(word):
     
     # Main game loop
     while not game_over:
-        print("\nWord to guess:", word_completion)
+        word_display = " ".join(word_completion)  # Inserting comma between each letter
+        print("\nWord to guess:", word_display)
         print("Used letters:", ", ".join(guessed_letters))  # Display used letters
-        guess = input("Guess a letter: ").upper()
+        guess = input("Guess a letter: ").upper()        
         
         # Check if the guess is a single letter
         if len(guess) != 1 or not guess.isalpha():
