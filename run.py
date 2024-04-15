@@ -103,7 +103,7 @@ def restart_game():
 # Main game loop
 while True:
     # Print initial message
-    print(figlet_format("Hangman", font="acrobatic", width=120))
+    print(figlet_format("Hangman", font="acrobatic", width=60))
     
     # Call the function to check if the user wants to read the instructions
     read_instructions()
