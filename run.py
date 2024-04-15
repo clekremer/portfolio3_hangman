@@ -22,7 +22,7 @@ def read_instructions():
             print("Instructions:")
             print("1. A random word has been selected.")
             print("2. You have to guess the letters in the word.")
-            print("3. You can only make 6 incorrect guesses before losing.")
+            print("3. You can only make 7 incorrect guesses before losing.")
             print("4. Good luck!")
             break
         elif choice == 'N':
