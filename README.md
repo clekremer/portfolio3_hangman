@@ -50,7 +50,7 @@ I used Acrobat font from pyfiglet.
 Test Cases
 
 ### Automated testing
-I used my school Code Institutes own validator https://pep8ci.herokuapp.com/ to check the code automated. I tested run.py, words.py, word_art.py and hangman_stages.py and the code had no errors or warnings in it.
+Code Institutes  validator https://pep8ci.herokuapp.com/ to check the code automatically.
 ![Screenshot validator]()
 ## Technologies Used
 * Languages: 
