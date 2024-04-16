@@ -1,16 +1,21 @@
-# Introduction Hangman game
-![Image of landing page]()
-[url to prod site]()
+# Hangman Game
 
-overview text.
+The game is based on the typical Hangman word guess principle. It´s a terminal game hosted Heroku and written in Python. For each wrong guess the gallow is build up and stickman is going to be hung up. You have 7 attempts to guess to correct word. 
+![Image of landing page]()
+[url to prod site](https://portfolio3-hangman-3c9d3306a756.herokuapp.com/)
+
 
 ## User Experience
-To provide a simple fun game for people that want to challenge themself. 
+Aim of this project is to provide an easy to handle and easy to use guess game for the interested user.
 
-### User Goals
-As a user I want:
-* xxxx
-
+### User Stories
+ - As a user I want to easily understand the idea and instructions of the game
+ - As a user I want to have the possibility to skip the instructions because everyone knows the rules for Hangman 
+ - As a user I want to have a seamless game flow and direct feedback from the software in case of incorrect inputs (validation of input)
+ - As a user I want to directly understand if my guess was correct or wrong
+ - As a user I want to see the progress of the game 
+ - As a user I want to know which letters I have already used
+ - As a user I want to have the possibility to restart the game or play it again
 
 
 ## Process diagram / Flowchart
@@ -19,15 +24,16 @@ The diagram shows the following steps:
 ![Diagram]()
 
 ## Wordart/Fonts
-I used Acrobat font from pyfiglet.
+I used the font "acrobatic" font from figlet (http://www.figlet.org/fontdb_example.cgi?font=acrobatic.flf). It based on stickman figures, so it matches very well to the idea of the game.
 
 ## Features
 ### Existing features
-* Start 
+The starting screen, should give a non verbal direct Idea about what the game is about. It shows the titel of the game "Hangman" in stickman fonts. So every user who knows Hangman directly understand that this is a hangman guessing game. If as user don´t knows Hangman he has the option to read the instruction.
+
 
 ![Landing page]()
 
-* Introduction
+* Instruction
     * xxx
 
 ![Introduction]()
