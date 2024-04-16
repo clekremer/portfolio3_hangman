@@ -54,17 +54,13 @@ Code Institutes  validator https://pep8ci.herokuapp.com/ to check the code autom
 ![Screenshot validator]()
 ## Technologies Used
 * Languages: 
-    * Python.
+    * Python
 * Libraries:
-    * random 
-        - Used to select a random word.
-    * os
-        - Used for its `clear` tool, to clear the terminal window.
+    * random to randomize the guess word
+    * os for the clear function to clear the terminal
 * Others:
-    * Github
-        - To store the repository for submission.
-    * Heroku
-        - To deploy a live version of the terminal.
+    * Github as repository
+    * Heroku as dpeloyment platform to host the live version 
     * pyfiglet
     * Flowchart 
 ## Bugs
