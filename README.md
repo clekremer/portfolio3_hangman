@@ -1,8 +1,7 @@
 # Hangman Game
 
-The game is based on the typical Hangman word guess principle. It´s a terminal game hosted Heroku and written in Python. For each wrong guess the gallow is build up and stickman is going to be hung up. You have 7 attempts to guess to correct word. 
-![Image of landing page]()
-[url to prod site](https://portfolio3-hangman-3c9d3306a756.herokuapp.com/)
+The game is based on the typical Hangman word guess principle. It´s a terminal game hosted Heroku ([url to prod site](https://portfolio3-hangman-3c9d3306a756.herokuapp.com/)) and written in Python. For each wrong guess the gallow is build up and stickman is going to be hung up. You have 7 attempts to guess to correct word. 
+![Image of landing page](docs/readme_images/start_game.PNG)
 
 
 ## User Experience
@@ -33,12 +32,12 @@ I used the font "acrobatic" font from figlet (http://www.figlet.org/fontdb_examp
 The starting screen, should give a non verbal direct Idea about what the game is about. It shows the titel of the game "Hangman" in stickman fonts. So every user who knows Hangman directly understand that this is a hangman guessing game. If as user don´t knows Hangman he has the option to read the instruction.
 
 
-![Landing page]()
+![Landing page](docs/readme_images/start_game.PNG)
 
 #### Instruction
 The user has the possibility to get a brief overview about how to play the game. The instruction is as short as possible, as it is a simple game. The user has the possibility to skip the instructions as most of the people know Hangman. 
 
-![Instruction]()
+![Instruction](docs/readme_images/instructions.PNG)
 
 #### Gameplay 
 - A random word will be selected, which the user has to guess
@@ -51,7 +50,7 @@ The user has the possibility to get a brief overview about how to play the game.
 - validation controls check if the letter is a letter and no other character (e.g. Num) and if only one letter is entered
 - The game ends either by guessing the correct word or by running out of attempts
 
-![Gamplay]()
+![Gamplay](docs/readme_images/gameplay.PNG)
 
 #### End of game
 - At the end of game it is displayed to the user with the wordart "Acrobatic" if he has won or lost
@@ -59,7 +58,9 @@ The user has the possibility to get a brief overview about how to play the game.
 - If he skip it he will see a "Goodbye" screen
 
 
-![End of game]()) 
+![End of game](docs/readme_images/endofgame_lose.PNG) 
+![End of game](docs/readme_images/endofgame_won.PNG) 
+![End of game](docs/readme_images/exitgame.PNG) 
 
 ### Future Features
  - Possibility to enter a user name
@@ -95,11 +96,22 @@ The following Test Cases were used for manual testing:
 
 Above manual test cases were executed multiple times after each change and after generating the final version of the code.
 
+![Validation Characters](docs/readme_images/validation_check_char.PNG)
+![Validation Single Letter](docs/readme_images/validation_check_singleletter.PNG)
+![Validation Enter Button](docs/readme_images/validation_check_enterbutton.PNG)
+
+
+
 ### Automated testing
 Code Institutes  validator https://pep8ci.herokuapp.com/ to check the code automatically.
 As a result of this testing no errors were visible:
 
-![Screenshot validator]()
+![Screenshot validation run.py](docs/readme_images/validation_runpy.PNG)
+
+![Screenshot validation hangman_stages.py](docs/readme_images/validation_hangman_stagespy.PNG)
+
+![Screenshot validation words.py](docs/readme_images/wordspy.PNG)
+
 
 ## Technologies used
 
@@ -113,10 +125,12 @@ As a result of this testing no errors were visible:
 ### Others:
  - Github as repository
  - Heroku as deployment platform to host the live version 
- - ?Flowchart? 
+ - ?Flowchart?
+  
 ## Bugs
 
 No known bugs
+
 ### Fixed bugs
 
 ### Remaining bugs
@@ -133,5 +147,9 @@ The app was deployed with Heroku by the following steps:
 
 ## Credits
 ### Code
+https://codereview.stackexchange.com/questions/101968/hangman-with-ascii
+http://www.figlet.org/fontdb_example.cgi?font=acrobatic.flf
+https://www.youtube.com/watch?v=m4nEnsavl6w
 
 ### Acknowledgements
+Thanks to my mentor Antonio and Kristyna for the consideration about the PP3. 
