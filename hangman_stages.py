@@ -1,101 +1,93 @@
 # Function to display the hangman based on number of tries left
 def display_hangman(tries):
-    stages = [# ASCII art for the different stages of the hangman
+    # ASCII art for the different stages of the hangman
+    stages = [
 
-"""
-   _________
-    |/        
-    |              
-    |                
-    |                 
-    |               
-    |                   
-    |___                 
-    """,
+        """
+           _________
+            |/
+            |
+            |
+            |
+            |
+            |
+            |___
+            """,
+        """
+           _________
+            |/   |
+            |
+            |
+            |
+            |
+            |
+            |___
+            H""",
 
-"""
-   _________
-    |/   |      
-    |              
-    |                
-    |                 
-    |               
-    |                   
-    |___                 
-    H""",
+        """
+           _________
+            |/   |
+            |   (_)
+            |
+            |
+            |
+            |
+            |___
+            HA""",
 
-"""
-   _________       
-    |/   |              
-    |   (_)
-    |                         
-    |                       
-    |                         
-    |                          
-    |___                       
-    HA""",
+        """
+           _________
+            |/   |
+            |   (_)
+            |    |
+            |    |
+            |
+            |
+            |___
+            HAN""",
 
-"""
-   ________               
-    |/   |                   
-    |   (_)                  
-    |    |                     
-    |    |                    
-    |                           
-    |                            
-    |___                    
-    HAN""",
+        """
+           _________
+            |/   |
+            |   (_)
+            |   /|
+            |    |
+            |
+            |
+            |___
+            HANG""",
 
+        """
+           _________
+            |/   |
+            |   (_)
+            |   /|\\
+            |    |
+            |
+            |
+            |___
+            HANGM""",
 
-"""
-   _________             
-    |/   |               
-    |   (_)                   
-    |   /|                     
-    |    |                    
-    |                        
-    |                          
-    |___                          
-    HANG""",
+        """
+           _________
+            |/   |
+            |   (_)
+            |   /|\\
+            |    |
+            |   /
+            |
+            |___
+            HANGMA""",
 
-
-"""
-   _________              
-    |/   |                     
-    |   (_)                     
-    |   /|\                    
-    |    |                       
-    |                             
-    |                            
-    |___                          
-    HANGM""",
-
-
-
-"""
-   ________                   
-    |/   |                         
-    |   (_)                      
-    |   /|\                             
-    |    |                          
-    |   /                            
-    |                                  
-    |___                              
-    HANGMA""",
-
-
-"""
-   ________
-    |/   |     
-    |   (_)    
-    |   /|\           
-    |    |        
-    |   / \        
-    |               
-    |___           
-    HANGMAN"""
- ]
-
-    return stages[tries]  # Return the corresponding stage of the hangman based on the number of tries left
-
-    
+        """
+           _________
+            |/   |
+            |   (_)
+            |   /|\\
+            |    |
+            |   / \\
+            |
+            |___
+            HANGMAN"""]
+    # Return the corresponding stage of the hangman
+    return stages[tries]
