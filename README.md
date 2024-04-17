@@ -18,9 +18,8 @@ Aim of this project is to provide an easy to handle and easy to use guess game f
 
 
 ## Process diagram / Flowchart
-The diagram shows the following steps:
-- xxx
-![Diagram]()
+The flowchart diagram was build with [Draw IO](https://app.diagrams.net/)
+![Flowchart Diagram](docs/flowchart/flowchart.png)
 
 ## Wordart/Fonts
 I used the font "acrobatic" font from figlet (http://www.figlet.org/fontdb_example.cgi?font=acrobatic.flf). It based on stickman figures, so it matches very well to the idea of the game.
@@ -30,7 +29,6 @@ I used the font "acrobatic" font from figlet (http://www.figlet.org/fontdb_examp
 
 #### Start Game
 The starting screen, should give a non verbal direct Idea about what the game is about. It shows the titel of the game "Hangman" in stickman fonts. So every user who knows Hangman directly understand that this is a hangman guessing game. If as user don´t knows Hangman he has the option to read the instruction.
-
 
 ![Landing page](docs/readme_images/start_game.PNG)
 
@@ -120,21 +118,15 @@ As a result of this testing no errors were visible:
 ### Libraries:
  - "random" to randomize the guess word
  - "os" for the clear function to clear the terminal
- - pyfiglet
+ - "pyfiglet" to import Acrobatic wordart 
 
 ### Others:
  - Github as repository
  - Heroku as deployment platform to host the live version 
- - ?Flowchart?
+ - [Draw IO](https://app.diagrams.net/) for creating the flowchart
   
 ## Bugs
-
 No known bugs
-
-### Fixed bugs
-
-### Remaining bugs
-
 
 ## Deployment
 The app was deployed with Heroku by the following steps:
@@ -147,9 +139,9 @@ The app was deployed with Heroku by the following steps:
 
 ## Credits
 ### Code
-https://codereview.stackexchange.com/questions/101968/hangman-with-ascii
-http://www.figlet.org/fontdb_example.cgi?font=acrobatic.flf
-https://www.youtube.com/watch?v=m4nEnsavl6w
+ - Hangman stages as ASCII wordart: https://codereview.stackexchange.com/questions/101968/hangman-with-ascii
+ - Wordart fonts "Acrobatic": http://www.figlet.org/fontdb_example.cgi?font=acrobatic.flf
+ - Considerations for the basic architecture of the game: https://www.youtube.com/watch?v=m4nEnsavl6w
 
 ### Acknowledgements
 Thanks to my mentor Antonio and Kristyna for the consideration about the PP3. 
