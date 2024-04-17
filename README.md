@@ -28,63 +28,110 @@ I used the font "acrobatic" font from figlet (http://www.figlet.org/fontdb_examp
 
 ## Features
 ### Existing features
+
+#### Start Game
 The starting screen, should give a non verbal direct Idea about what the game is about. It shows the titel of the game "Hangman" in stickman fonts. So every user who knows Hangman directly understand that this is a hangman guessing game. If as user don´t knows Hangman he has the option to read the instruction.
 
 
 ![Landing page]()
 
-* Instruction
-    * xxx
+#### Instruction
+The user has the possibility to get a brief overview about how to play the game. The instruction is as short as possible, as it is a simple game. The user has the possibility to skip the instructions as most of the people know Hangman. 
 
-![Introduction]()
+![Instruction]()
 
-* Gameplay 
-    * xxxx
+#### Gameplay 
+- A random word will be selected, which the user has to guess
+- For each turn the user can guess one letter
+- A gallow is shown and a stickman and the word "Hangman" is constructed for each wrong guess
+- The user can do 7 wrong attempts before he lose and the "Hangman" is hung up
+- Used letters are displayed to the user
+- For each letter in the word a "_" is displayed, so that the user knows how many letters he has to guess
+- Each correct guessed letter is displayed in the word to guess
+- validation controls check if the letter is a letter and no other character (e.g. Num) and if only one letter is entered
+- The game ends either by guessing the correct word or by running out of attempts
 
 ![Gamplay]()
 
-* End of game
-    * xxxx
+#### End of game
+- At the end of game it is displayed to the user with the wordart "Acrobatic" if he has won or lost
+- He has the possibility to directly restart the game or skip it 
+- If he skip it he will see a "Goodbye" screen
+
 
 ![End of game]()) 
 
 ### Future Features
- * 
+ - Possibility to enter a user name
+ - Create a High Score list based on the user name 
+ - Possibiliy to guess the full word in one guess
+
 
 ## Testing
 ### Manual testing
-Test Cases
+The following Test Cases were used for manual testing:
+ - Test "Rungame" button in terminal if it restarts the game
+ - Check if "Y/N" will show or skip the display of instructions
+ - After starting the game 
+    - is the gallow correctly displayed?
+    - do I see the number of characters represented by number of "_" in the word to guess
+ - After each correct guess:
+    - do I get feedback of the guess was correct 
+    - will the used letter added to list of used letters
+    - will a correct guessed letter be added to the word to guess
+ - After each incorrect guess:
+    - do I get feedback of the guess was correct 
+    - will the used letter added to list of used letters
+    - will the stickman move to the next stage of construction
+    - will the word "Hangman" will be extended by another letter
+ - Validation controls:
+    - is it prevented to enter other characters then letters?
+    - is it prevented to enter more then one letter?
+    - is it prevented to enter the same letter again?
+    - do I get proper notifications for above validation controls?
+ - At the end of game:
+    - Do I get proper feedback if I have won or lost?
+    - Can I restart or abort the game?
+
+Above manual test cases were executed multiple times after each change and after generating the final version of the code.
 
 ### Automated testing
 Code Institutes  validator https://pep8ci.herokuapp.com/ to check the code automatically.
+As a result of this testing no errors were visible:
+
 ![Screenshot validator]()
-## Technologies Used
-* Languages: 
-    * Python
-* Libraries:
-    * random to randomize the guess word
-    * os for the clear function to clear the terminal
-* Others:
-    * Github as repository
-    * Heroku as dpeloyment platform to host the live version 
-    * pyfiglet
-    * Flowchart 
+
+## Technologies used
+
+### Languages: 
+ - Python
+### Libraries:
+ - "random" to randomize the guess word
+ - "os" for the clear function to clear the terminal
+ - pyfiglet
+
+### Others:
+ - Github as repository
+ - Heroku as deployment platform to host the live version 
+ - ?Flowchart? 
 ## Bugs
+
+No known bugs
 ### Fixed bugs
 
 ### Remaining bugs
 
 
 ## Deployment
- The app was deployed through Heroku. The steps are as following:
+The app was deployed with Heroku by the following steps:
 
 1. Create new app in Heroku
 2. Add unique name for the app and select Europe as region and click "Create app".
-3. In settings add buildpacks for `Python` and `NodeJS`(Config_vars were not required for the game.).
+3. In "Settings-Tab" add buildpacks for `Python` and `NodeJS`(Config_vars are not required for the game.).
 4. In "Deploy-Tab" select GitHub as deployment method and connect the Github repository with Heroku
-5. For the initial deployment I used manual deployment; afterwards I enabled automatic deployment. So deployment happens automatically with the execution of every "git push" command.  
+5. For the initial deployment use manual deployment; afterwards  enable automatic deployment. So that deployment happens automatically with the execution of every "git push" command.  
+
 ## Credits
 ### Code
-* 
-* 
+
 ### Acknowledgements
