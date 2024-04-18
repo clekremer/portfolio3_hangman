@@ -1,6 +1,6 @@
 # Hangman Game
 
-The game is based on the typical Hangman word guess principle. It´s a terminal game hosted Heroku ([url to prod site](https://portfolio3-hangman-3c9d3306a756.herokuapp.com/)) and written in Python. For each wrong guess the gallow is build up and stickman is going to be hung up. You have 7 attempts to guess to correct word. 
+The game is based on the typical Hangman word guess principle. It´s a terminal game hosted on Heroku ([url to prod site](https://portfolio3-hangman-3c9d3306a756.herokuapp.com/)) and written in Python. For each wrong guess the stickman is build up on the gallow. You have 7 attempts to guess to correct word. 
 ![Image of landing page](docs/readme_images/start_game.PNG)
 
 
@@ -28,7 +28,7 @@ I used the font "acrobatic" font from figlet (http://www.figlet.org/fontdb_examp
 ### Existing features
 
 #### Start Game
-The starting screen, should give a non verbal direct Idea about what the game is about. It shows the titel of the game "Hangman" in stickman fonts. So every user who knows Hangman directly understand that this is a hangman guessing game. If as user don´t knows Hangman he has the option to read the instruction.
+The starting screen, should give a non verbal direct idea about what the game is about. It shows the titel of the game "Hangman" in stickman fonts. So every user who knows Hangman directly understand that this is a hangman guessing game. If as user don´t knows Hangman he has the option to read the instruction.
 
 ![Landing page](docs/readme_images/start_game.PNG)
 
@@ -87,6 +87,7 @@ The following Test Cases were used for manual testing:
     - is it prevented to enter other characters then letters?
     - is it prevented to enter more then one letter?
     - is it prevented to enter the same letter again?
+    - is it prevented to simply hit enter button?
     - do I get proper notifications for above validation controls?
  - At the end of game:
     - Do I get proper feedback if I have won or lost?
