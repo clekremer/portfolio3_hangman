@@ -120,7 +120,6 @@ while True:
 
     # Get a random word
     random_word = get_word()
-    print("Random word:", random_word)
 
     # Start the game with the random word
     if start_game(random_word):
